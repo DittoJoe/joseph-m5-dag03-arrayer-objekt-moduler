@@ -43,6 +43,12 @@ console.log(Object.keys(kopp));
 
 // UPPGIFT 3: arrayer av objekt
 // a) skriv ut hur många rätter menyn har och namnet på den första
+console.log(Object.keys(meny).length);
+console.log(Object.values(meny)[0].namn);
 // b) loopa med for...of och skriv ut "namn – pris kr" för varje rätt
+for (const [key, value] of Object.entries(meny)) {
+  console.log(`${value.namn} - ${value.pris} kr`);
+}
 // c) skriv ut namnet på den sista rätten utan att veta antalet (tips: length - 1)
+console.log(Object.values(meny)[meny.length - 1].namn);
 // TODO
