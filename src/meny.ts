@@ -6,22 +6,26 @@ import type { Ratt, OrderRad } from "./typer";
 
 // 1. Alla vegetariska rätter (filter). Returnerar en ny array.
 export function vegetariskaRatter(meny: Ratt[]): Ratt[] {
-  // TODO
+  return meny.filter(meny => meny.vegetarisk)
 }
 
 // 2. Bara namnen, som en array av text (map). ["Kardemummabulle", ...]
 export function rattNamn(meny: Ratt[]): string[] {
-  // TODO
+  return meny.map(meny => meny.namn)
 }
 
 // 3. En prislista som text: "Kardemummabulle – 35 kr" (map + formateraPris)
 export function prislista(meny: Ratt[]): string[] {
-  // TODO
+  for (const [key, value] of Object.entries(meny)) {
+      return meny.map(value => `${value.namn} – ${value.pris} kr`);
+  }
 }
 
 // 4. Hitta en rätt via id (find). Returnerar objektet, eller undefined om det saknas.
 export function hittaRatt(meny: Ratt[], id: number): Ratt | undefined {
-  // TODO
+  if (id < Object.keys(meny).length) {
+    return meny.find(ratt => ratt.id - 1);
+  }
 }
 
 // 5. Den billigaste rätten (reduce). Returnerar objektet. Tom lista ger undefined.
