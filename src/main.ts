@@ -3,10 +3,18 @@ import { meny } from "./data";
 
 // UPPGIFT 1: arrayer
 // a) skapa const drycker: string[] = ["Bryggkaffe", "Latte", "Te"];
+const drycker: string[] = ["Bryggkaffe", "Latte", "Te"];
 // b) lägg till "Chai" sist med push. Skriv ut listan och längden.
+drycker.push("Chai");
+console.log(drycker);
+console.log(drycker.length);
 // c) ta bort sista med pop och skriv ut vad som togs bort.
+console.log(drycker.pop());
 // d) skriv ut platsen för "Latte" (indexOf) och om "Cola" finns (includes).
+console.log(drycker.indexOf("Latte"));
+console.log(drycker.includes("Cola"));
 // e) skriv ut hela listan som en text: drycker.join(", ")
+console.log(drycker.join(", "));
 // TODO
 
 
